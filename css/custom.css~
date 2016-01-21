@@ -19,6 +19,15 @@ text-decoration: underline;
 font-size: 1.8rem; line-height: 1.8rem;
 }
 
-.article.single .article-title{
-font-size: 1.8rem; line-height: 1.8rem;
+article.single .article-title h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  line-height: 2rem;
 }
+
+pre {
+  padding: 9px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
