@@ -1,0 +1,24 @@
+/* Please override here. */
+img {
+  width: 200px;
+}
+
+.article-body a {
+text-decoration: underline;
+}
+
+.article-body p {
+ font-size: medium;
+}
+
+.article-body td {
+ padding: 3px;
+}
+
+.title a{
+font-size: 1.8rem; line-height: 1.8rem;
+}
+
+.article.single .article-title{
+font-size: 1.8rem; line-height: 1.8rem;
+}

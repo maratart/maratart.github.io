@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Django on О моём IT</title>
+    <link>http://maratart.github.io/tags/django/</link>
+    <description>Recent content in Django on О моём IT</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ru-ru</language>
+    <lastBuildDate>Thu, 03 Apr 2014 11:57:00 +0300</lastBuildDate>
+    <atom:link href="http://maratart.github.io/tags/django/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>PoSEEDelki: как взаимодействовать с разработчиками</title>
+      <link>http://maratart.github.io/blog/poseedelki-03-04-2014/</link>
+      <pubDate>Thu, 03 Apr 2014 11:57:00 +0300</pubDate>
+      
+      <guid>http://maratart.github.io/blog/poseedelki-03-04-2014/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://maratart.github.io/blog/images/logo-poseedelki.png&#34; alt=&#34;logo-poseedelki&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Побывал на встрече &lt;a href=&#34;http://greenfield-project.ru/poseedelki/events/poseedelki_3_04_2014/&#34;&gt;&amp;rdquo;#poSEEDelki: как взаимодействовать с разработчиками&amp;rdquo;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Основные моменты работы с программистами и сложными проектами
+освещал Денис Петрухин, генеральный директор студии
+веб-разработки &lt;a href=&#34;http://futurecolors.ru&#34;&gt;Future Colors&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Moscow Django MeetUp № 18 — 27 марта 2014</title>
+      <link>http://maratart.github.io/blog/moscow-django-meetup-18/</link>
+      <pubDate>Thu, 27 Mar 2014 11:35:00 +0300</pubDate>
+      
+      <guid>http://maratart.github.io/blog/moscow-django-meetup-18/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://maratart.ru/wp-content/uploads/2014/03/logo-moscowdjango.png&#34; alt=&#34;logo-moscowdjango&#34; /&gt;
+&lt;img src=&#34;http://maratart.ru/wp-content/uploads/2014/03/logo-python-e1398239117263.png&#34; alt=&#34;logo-python&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Побывал на &lt;a href=&#34;http://moscowdjango.ru/meetup/18/&#34;&gt;http://moscowdjango.ru/meetup/18/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Доклады:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;«Tulip и Асинхронное Программирование в Python 3»&lt;/strong&gt;&lt;br /&gt;
+Андрей Соломатин — &lt;a href=&#34;http://andreysalomatin.me&#34;&gt;http://andreysalomatin.me&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Асинхронный код — просто и эффективно. Tulip позволяет писать
+приложения, которые используют возможности ОС для асинхронного
+ввода/вывода. Фреймворк станет частью Python 3.4. Доклад о том, как
+устроен Tulip и как им пользоваться.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;«Python и real-time»&lt;/strong&gt;&lt;br /&gt;
+Александр Емелин — Mail.ru Group&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Философия Питона гласит, что должен быть только один правильный способ
+сделать что-либо. К сожалению, на данный момент существует масса
+способов, которыми можно добавить real-time коммуникации на ваш сайт и
+среди них нет одного предпочтительного варианта.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Поспрашивал у ребят, насколько сейчас большой спрос на
+junior-программистов Python и Django. Спрос есть. И немаленький.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

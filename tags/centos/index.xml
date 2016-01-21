@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Centos on О моём IT</title>
+    <link>http://maratart.github.io/tags/centos/</link>
+    <description>Recent content in Centos on О моём IT</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ru-ru</language>
+    <lastBuildDate>Thu, 17 Apr 2014 04:25:00 +0300</lastBuildDate>
+    <atom:link href="http://maratart.github.io/tags/centos/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Как настроить группы пользователей для ftp-сервера proftpd</title>
+      <link>http://maratart.github.io/blog/proftpd-gruppy/</link>
+      <pubDate>Thu, 17 Apr 2014 04:25:00 +0300</pubDate>
+      
+      <guid>http://maratart.github.io/blog/proftpd-gruppy/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://maratart.github.io/blog/images/logo-proftpd.png&#34; alt=&#34;logo-proftpd&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Задача:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Настроить доступ группам пользователей на скачку файлов по ftp из
+нескольких каталогов.&lt;/li&gt;
+&lt;li&gt;Пользователь может принадлежать нескольким группам.&lt;/li&gt;
+&lt;li&gt;Каждая группа имеет доступ только в собственный каталог и не видит
+каталоги других групп.&lt;/li&gt;
+&lt;li&gt;Доступ пользователей ограничен по времени (до определенной даты).&lt;/li&gt;
+&lt;li&gt;Один пользователь-администратор имеет право на запись во все
+каталоги.&lt;/li&gt;
+&lt;li&gt;Интерфейс добавления/удаления/ограничения пользователей должен быть
+через Веб.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Решение&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;p&gt;Поскольку сервер предназначен только для работы с FTP можно использовать
+для системных пользователей. Администрировать можно через webmin.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Пользователи и группы:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;ftpgroup — общая группа для всех пользователей&lt;/li&gt;
+&lt;li&gt;ftpga — группа с доступом к каталогу A&lt;/li&gt;
+&lt;li&gt;ftpgb — группа с доступом к каталогу B&lt;/li&gt;
+&lt;li&gt;ftp_admin — администратор ftp&lt;/li&gt;
+&lt;li&gt;ftp1 — пользователь с доступом к каталогу A&lt;/li&gt;
+&lt;li&gt;ftp2 — пользователь с доступом к каталогам B&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Структура каталогов и права на доступ:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;| **каталог**    | **owner**    | **group**   | **permission**   |
+|----------------|--------------|-------------|------------------|
+| /ftp/files     | ftp_admin    | ftpgroup    | 750              |
+| /ftp/files/A   | ftp_admin    | ftpga       | 750              |
+| /ftp/files/B   | ftp_admin    | ftpgb       | 750              |
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://maratart.github.io/blog/images/logo-ubuntu-orange.png&#34; alt=&#34;logo-ubuntu-orange&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Настройки proftpd.conf в Ubuntu 12.04:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;RequireValidShell off #Не требовать оболочку для пользователя
+&amp;lt;Directory /ftp/files&amp;gt;
+  HideNoAccess on #Не показывать каталоги с закрытым доступом
+  &amp;lt;Limit WRITE&amp;gt;
+    AllowUser ftp_admin #Право на запись фтп-администратору
+  &amp;lt;/Limit&amp;gt;
+&amp;lt;/Directory&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://maratart.github.io/blog/images/logo-centos.png&#34; alt=&#34;logo-centos&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Настройки proftpd.conf в CentOS 6.5:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;Directory /ftp/diler&amp;gt;
+  HideNoAccess on
+  &amp;lt;Limit WRITE&amp;gt;
+    AllowUser diler_admin
+  &amp;lt;/Limit&amp;gt;
+&amp;lt;/Directory&amp;gt;
+
+&amp;lt;Directory /&amp;gt;
+  HideNoAccess onHideFiles ^\..*
+  &amp;lt;Limit ALL&amp;gt;
+    IgnoreHidden On
+  &amp;lt;/Limit&amp;gt;
+&amp;lt;/Directory&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Для отображения в браузере имен файлов с кириллицей:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;IfModule mod_lang.c&amp;gt;
+  UseEncoding utf-8 cp1251
+&amp;lt;/IfModule&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Отключить PAM авторизацию также.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Установка proftpd на CentOS 6:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo rpm -Uvh http://download.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm
+sudo yum install proftpd
+chkconfig –level 3 proftpd on
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Также нужно открыть в iptables порт 21.
+ &lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

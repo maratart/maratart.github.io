@@ -1,0 +1,604 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>О моём IT</title>
+    <link>http://maratart.github.io/</link>
+    <description>Recent content on О моём IT</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ru-ru</language>
+    <lastBuildDate>Thu, 21 Jan 2016 22:28:05 +0300</lastBuildDate>
+    <atom:link href="http://maratart.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Генератор hugo &#43; хостинг github</title>
+      <link>http://maratart.github.io/blog/hugo&#43;github/</link>
+      <pubDate>Thu, 21 Jan 2016 22:28:05 +0300</pubDate>
+      
+      <guid>http://maratart.github.io/blog/hugo&#43;github/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://maratart.github.io/blog/images/hugo-logo.png&#34; alt=&#34;Hugo Logo&#34; /&gt;
+&lt;img src=&#34;http://maratart.github.io/blog/images/logo-githubpages.png&#34; alt=&#34;Githubpages Logo&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Перевожу генерацию сайта на &lt;a href=&#34;http://gohugo.io&#34;&gt;Hugo&lt;/a&gt;, что написан на &lt;a href=&#34;http://golang.org&#34;&gt;Go&lt;/a&gt;. А хостинг переношу на &lt;a href=&#34;http://pages.github.com&#34;&gt;http://pages.github.com&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Перезапуск maratart.ru</title>
+      <link>http://maratart.github.io/blog/new-static-blog/</link>
+      <pubDate>Tue, 11 Nov 2014 02:13:14 +0300</pubDate>
+      
+      <guid>http://maratart.github.io/blog/new-static-blog/</guid>
+      <description>&lt;p&gt;Сегодня перевёл сайт на новую-старую технологию — статическую генерацию. Хорошая штука — Static site generator &lt;a href=&#34;http://blog.getpelican.com&#34;&gt;Pelican&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Запуск maratart.ru</title>
+      <link>http://maratart.github.io/blog/zapusk-maratart-ru/</link>
+      <pubDate>Wed, 23 Apr 2014 06:42:00 +0300</pubDate>
+      
+      <guid>http://maratart.github.io/blog/zapusk-maratart-ru/</guid>
+      <description>&lt;p&gt;Сегодня дозаполнил 7 постов из истории и опубликовал (открыл для поисковых систем) maratart.ru — заметки по моей компьютерной истории.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Как настроить группы пользователей для ftp-сервера proftpd</title>
+      <link>http://maratart.github.io/blog/proftpd-gruppy/</link>
+      <pubDate>Thu, 17 Apr 2014 04:25:00 +0300</pubDate>
+      
+      <guid>http://maratart.github.io/blog/proftpd-gruppy/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://maratart.github.io/blog/images/logo-proftpd.png&#34; alt=&#34;logo-proftpd&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Задача:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Настроить доступ группам пользователей на скачку файлов по ftp из
+нескольких каталогов.&lt;/li&gt;
+&lt;li&gt;Пользователь может принадлежать нескольким группам.&lt;/li&gt;
+&lt;li&gt;Каждая группа имеет доступ только в собственный каталог и не видит
+каталоги других групп.&lt;/li&gt;
+&lt;li&gt;Доступ пользователей ограничен по времени (до определенной даты).&lt;/li&gt;
+&lt;li&gt;Один пользователь-администратор имеет право на запись во все
+каталоги.&lt;/li&gt;
+&lt;li&gt;Интерфейс добавления/удаления/ограничения пользователей должен быть
+через Веб.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Решение&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;p&gt;Поскольку сервер предназначен только для работы с FTP можно использовать
+для системных пользователей. Администрировать можно через webmin.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Пользователи и группы:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;ftpgroup — общая группа для всех пользователей&lt;/li&gt;
+&lt;li&gt;ftpga — группа с доступом к каталогу A&lt;/li&gt;
+&lt;li&gt;ftpgb — группа с доступом к каталогу B&lt;/li&gt;
+&lt;li&gt;ftp_admin — администратор ftp&lt;/li&gt;
+&lt;li&gt;ftp1 — пользователь с доступом к каталогу A&lt;/li&gt;
+&lt;li&gt;ftp2 — пользователь с доступом к каталогам B&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Структура каталогов и права на доступ:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;| **каталог**    | **owner**    | **group**   | **permission**   |
+|----------------|--------------|-------------|------------------|
+| /ftp/files     | ftp_admin    | ftpgroup    | 750              |
+| /ftp/files/A   | ftp_admin    | ftpga       | 750              |
+| /ftp/files/B   | ftp_admin    | ftpgb       | 750              |
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://maratart.github.io/blog/images/logo-ubuntu-orange.png&#34; alt=&#34;logo-ubuntu-orange&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Настройки proftpd.conf в Ubuntu 12.04:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;RequireValidShell off #Не требовать оболочку для пользователя
+&amp;lt;Directory /ftp/files&amp;gt;
+  HideNoAccess on #Не показывать каталоги с закрытым доступом
+  &amp;lt;Limit WRITE&amp;gt;
+    AllowUser ftp_admin #Право на запись фтп-администратору
+  &amp;lt;/Limit&amp;gt;
+&amp;lt;/Directory&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://maratart.github.io/blog/images/logo-centos.png&#34; alt=&#34;logo-centos&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Настройки proftpd.conf в CentOS 6.5:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;Directory /ftp/diler&amp;gt;
+  HideNoAccess on
+  &amp;lt;Limit WRITE&amp;gt;
+    AllowUser diler_admin
+  &amp;lt;/Limit&amp;gt;
+&amp;lt;/Directory&amp;gt;
+
+&amp;lt;Directory /&amp;gt;
+  HideNoAccess onHideFiles ^\..*
+  &amp;lt;Limit ALL&amp;gt;
+    IgnoreHidden On
+  &amp;lt;/Limit&amp;gt;
+&amp;lt;/Directory&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Для отображения в браузере имен файлов с кириллицей:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;IfModule mod_lang.c&amp;gt;
+  UseEncoding utf-8 cp1251
+&amp;lt;/IfModule&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Отключить PAM авторизацию также.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Установка proftpd на CentOS 6:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo rpm -Uvh http://download.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm
+sudo yum install proftpd
+chkconfig –level 3 proftpd on
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Также нужно открыть в iptables порт 21.
+ &lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Сравнение по востребованности специалистов Django, Rails, Node.js на западном рынке</title>
+      <link>http://maratart.github.io/blog/django-rails-nodejs-na-zapade/</link>
+      <pubDate>Sun, 06 Apr 2014 11:28:00 +0300</pubDate>
+      
+      <guid>http://maratart.github.io/blog/django-rails-nodejs-na-zapade/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://maratart.github.io/blog/images/logo-rails.png&#34; style=&#34;width:100px&#34;&gt;
+&lt;img src=&#34;http://maratart.github.io/blog/images/logo-django.gif&#34;&gt;
+&lt;img src=&#34;http://maratart.github.io/blog/images/logo-nodejs.png&#34;&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Сравнение по востребованности специалистов Django, Rails, Node.js можно посмотреть вот на этих сайтах:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.simplyhired.com/a/jobtrends/trend/q-django%2Crails%2Cnode.js&#34;&gt;http://www.simplyhired.com/a/jobtrends/trend/q-django%2Crails%2Cnode.js&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.indeed.com/jobtrends?q=django%2Crails%2Cnode.js&#34;&gt;http://www.indeed.com/jobtrends?q=django%2Crails%2Cnode.js&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>PoSEEDelki: как взаимодействовать с разработчиками</title>
+      <link>http://maratart.github.io/blog/poseedelki-03-04-2014/</link>
+      <pubDate>Thu, 03 Apr 2014 11:57:00 +0300</pubDate>
+      
+      <guid>http://maratart.github.io/blog/poseedelki-03-04-2014/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://maratart.github.io/blog/images/logo-poseedelki.png&#34; alt=&#34;logo-poseedelki&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Побывал на встрече &lt;a href=&#34;http://greenfield-project.ru/poseedelki/events/poseedelki_3_04_2014/&#34;&gt;&amp;rdquo;#poSEEDelki: как взаимодействовать с разработчиками&amp;rdquo;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Основные моменты работы с программистами и сложными проектами
+освещал Денис Петрухин, генеральный директор студии
+веб-разработки &lt;a href=&#34;http://futurecolors.ru&#34;&gt;Future Colors&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Moscow Django MeetUp № 18 — 27 марта 2014</title>
+      <link>http://maratart.github.io/blog/moscow-django-meetup-18/</link>
+      <pubDate>Thu, 27 Mar 2014 11:35:00 +0300</pubDate>
+      
+      <guid>http://maratart.github.io/blog/moscow-django-meetup-18/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://maratart.ru/wp-content/uploads/2014/03/logo-moscowdjango.png&#34; alt=&#34;logo-moscowdjango&#34; /&gt;
+&lt;img src=&#34;http://maratart.ru/wp-content/uploads/2014/03/logo-python-e1398239117263.png&#34; alt=&#34;logo-python&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Побывал на &lt;a href=&#34;http://moscowdjango.ru/meetup/18/&#34;&gt;http://moscowdjango.ru/meetup/18/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Доклады:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;«Tulip и Асинхронное Программирование в Python 3»&lt;/strong&gt;&lt;br /&gt;
+Андрей Соломатин — &lt;a href=&#34;http://andreysalomatin.me&#34;&gt;http://andreysalomatin.me&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Асинхронный код — просто и эффективно. Tulip позволяет писать
+приложения, которые используют возможности ОС для асинхронного
+ввода/вывода. Фреймворк станет частью Python 3.4. Доклад о том, как
+устроен Tulip и как им пользоваться.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;«Python и real-time»&lt;/strong&gt;&lt;br /&gt;
+Александр Емелин — Mail.ru Group&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Философия Питона гласит, что должен быть только один правильный способ
+сделать что-либо. К сожалению, на данный момент существует масса
+способов, которыми можно добавить real-time коммуникации на ваш сайт и
+среди них нет одного предпочтительного варианта.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Поспрашивал у ребят, насколько сейчас большой спрос на
+junior-программистов Python и Django. Спрос есть. И немаленький.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Обзор количества вакансий и зарплат программистов в Москве и Московской области на март-апрель 2014 года</title>
+      <link>http://maratart.github.io/blog/vakansii-zatplaty-moskva-programm-2014/</link>
+      <pubDate>Wed, 26 Mar 2014 10:48:00 +0300</pubDate>
+      
+      <guid>http://maratart.github.io/blog/vakansii-zatplaty-moskva-programm-2014/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://maratart.github.io/blog/wp-content/uploads/2014/03/yandex-rabota.png&#34; alt=&#34;yandex-rabota&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Посмотрим количество вакансий и уровень зарплат программистов на
+сегодняшний день / 26 марта 2014 года /  в Москве и Московской области:&lt;/p&gt;
+
+&lt;p&gt;&lt;table border=&#34;1&#34;&gt;
+   &lt;tbody&gt;
+   &lt;tr&gt;
+   &lt;td valign=&#34;top&#34;&gt;
+&lt;b&gt;Вакансия&lt;/b&gt;
+   &lt;/td&gt;
+   &lt;td valign=&#34;top&#34;&gt;
+&lt;b&gt;Общее количество&lt;/b&gt;
+   &lt;/td&gt;
+   &lt;td valign=&#34;top&#34;&gt;
+&lt;b&gt;С гибким графиком&lt;/b&gt;
+   &lt;/td&gt;
+   &lt;td valign=&#34;top&#34;&gt;
+&lt;b&gt;Без опыта&lt;/b&gt;
+   &lt;/td&gt;
+   &lt;td valign=&#34;top&#34;&gt;
+&lt;b&gt;Средняя зарплата, тыс. руб&lt;/b&gt;
+   &lt;/td&gt;
+   &lt;/tr&gt;
+   &lt;tr&gt;
+   &lt;td valign=&#34;top&#34;&gt;
+программист java
+   &lt;/td&gt;
+   &lt;td valign=&#34;top&#34;&gt;
+317
+   &lt;/td&gt;
+   &lt;td valign=&#34;top&#34;&gt;
+15
+   &lt;/td&gt;
+   &lt;td valign=&#34;top&#34;&gt;
+14
+   &lt;/td&gt;
+   &lt;td valign=&#34;top&#34;&gt;
+107
+   &lt;/td&gt;
+   &lt;/tr&gt;
+   &lt;tr&gt;
+   &lt;td valign=&#34;top&#34;&gt;
+программист android
+   &lt;/td&gt;
+   &lt;td valign=&#34;top&#34;&gt;
+84
+   &lt;/td&gt;
+   &lt;td valign=&#34;top&#34;&gt;
+6
+   &lt;/td&gt;
+   &lt;td valign=&#34;top&#34;&gt;
+1
+   &lt;/td&gt;
+   &lt;td valign=&#34;top&#34;&gt;
+100
+   &lt;/td&gt;
+   &lt;/tr&gt;
+   &lt;tr&gt;
+   &lt;td valign=&#34;top&#34;&gt;
+программист iOS
+   &lt;/td&gt;
+   &lt;td valign=&#34;top&#34;&gt;
+83
+   &lt;/td&gt;
+   &lt;td valign=&#34;top&#34;&gt;
+9
+   &lt;/td&gt;
+   &lt;td valign=&#34;top&#34;&gt;
+5
+   &lt;/td&gt;
+   &lt;td valign=&#34;top&#34;&gt;
+97
+   &lt;/td&gt;
+   &lt;/tr&gt;
+   &lt;tr&gt;
+   &lt;td valign=&#34;top&#34;&gt;
+программист python
+   &lt;/td&gt;
+   &lt;td valign=&#34;top&#34;&gt;
+72
+   &lt;/td&gt;
+   &lt;td valign=&#34;top&#34;&gt;
+6
+   &lt;/td&gt;
+   &lt;td valign=&#34;top&#34;&gt;
+4
+   &lt;/td&gt;
+   &lt;td valign=&#34;top&#34;&gt;
+91
+   &lt;/td&gt;
+   &lt;/tr&gt;
+   &lt;tr&gt;
+   &lt;td valign=&#34;top&#34;&gt;
+программист django
+   &lt;/td&gt;
+   &lt;td valign=&#34;top&#34;&gt;
+14
+   &lt;/td&gt;
+   &lt;td valign=&#34;top&#34;&gt;
+3
+   &lt;/td&gt;
+   &lt;td valign=&#34;top&#34;&gt;
+2
+   &lt;/td&gt;
+   &lt;td valign=&#34;top&#34;&gt;
+91 (взято из python)
+   &lt;/td&gt;
+   &lt;/tr&gt;
+   &lt;tr&gt;
+   &lt;td valign=&#34;top&#34;&gt;
+программист php
+   &lt;/td&gt;
+   &lt;td valign=&#34;top&#34;&gt;
+455
+   &lt;/td&gt;
+   &lt;td valign=&#34;top&#34;&gt;
+25
+   &lt;/td&gt;
+   &lt;td valign=&#34;top&#34;&gt;
+17
+   &lt;/td&gt;
+   &lt;td valign=&#34;top&#34;&gt;
+73
+   &lt;/td&gt;
+   &lt;/tr&gt;
+   &lt;tr&gt;
+   &lt;td valign=&#34;top&#34;&gt;
+программист scala
+   &lt;/td&gt;
+   &lt;td valign=&#34;top&#34;&gt;
+23
+   &lt;/td&gt;
+   &lt;td valign=&#34;top&#34;&gt;
+0
+   &lt;/td&gt;
+   &lt;td valign=&#34;top&#34;&gt;
+3
+   &lt;/td&gt;
+   &lt;td valign=&#34;top&#34;&gt;
+107 (взято из java)
+   &lt;/td&gt;
+   &lt;/tr&gt;
+   &lt;tr&gt;
+   &lt;td colspan=&#34;5&#34; valign=&#34;top&#34;&gt;
+&lt;b&gt;Дополнение от 03.04.2014&lt;/b&gt;
+   &lt;/td&gt;
+   &lt;/tr&gt;
+   &lt;tr&gt;
+   &lt;td valign=&#34;top&#34;&gt;
+Node.js
+   &lt;/td&gt;
+   &lt;td valign=&#34;top&#34;&gt;
+9
+   &lt;/td&gt;
+   &lt;td valign=&#34;top&#34;&gt;
+1
+   &lt;/td&gt;
+   &lt;td valign=&#34;top&#34;&gt;
+0
+   &lt;/td&gt;
+   &lt;td valign=&#34;top&#34;&gt;
+От 70 до 180 (средней нет)
+   &lt;/td&gt;
+   &lt;/tr&gt;
+   &lt;tr&gt;
+   &lt;td valign=&#34;top&#34;&gt;
+программист ruby
+   &lt;/td&gt;
+   &lt;td valign=&#34;top&#34;&gt;
+38
+   &lt;/td&gt;
+   &lt;td valign=&#34;top&#34;&gt;
+2
+   &lt;/td&gt;
+   &lt;td valign=&#34;top&#34;&gt;
+0
+   &lt;/td&gt;
+   &lt;td valign=&#34;top&#34;&gt;
+85
+   &lt;/td&gt;
+   &lt;/tr&gt;
+   &lt;tr&gt;
+   &lt;td colspan=&#34;5&#34; valign=&#34;top&#34;&gt;
+&lt;b&gt;Дополнение от 04.04.2014&lt;/b&gt;
+   &lt;/td&gt;
+   &lt;/tr&gt;
+   &lt;tr&gt;
+   &lt;td valign=&#34;top&#34;&gt;
+frontend
+   &lt;/td&gt;
+   &lt;td valign=&#34;top&#34;&gt;
+138
+   &lt;/td&gt;
+   &lt;td valign=&#34;top&#34;&gt;
+6
+   &lt;/td&gt;
+   &lt;td valign=&#34;top&#34;&gt;
+5
+   &lt;/td&gt;
+   &lt;td valign=&#34;top&#34;&gt;
+   &lt;/td&gt;
+   &lt;/tr&gt;
+   &lt;tr&gt;
+   &lt;td colspan=&#34;5&#34; valign=&#34;top&#34;&gt;
+&lt;b&gt;Дополнение от 06.04.2014&lt;/b&gt;
+   &lt;/td&gt;
+   &lt;/tr&gt;
+   &lt;tr&gt;
+   &lt;td valign=&#34;top&#34;&gt;
+   &lt;div&gt;
+программист bitrix
+   &lt;/div&gt;
+   &lt;/td&gt;
+   &lt;td valign=&#34;top&#34;&gt;
+   &lt;div&gt;
+73
+   &lt;/div&gt;
+   &lt;/td&gt;
+   &lt;td valign=&#34;top&#34;&gt;
+5
+   &lt;/td&gt;
+   &lt;td valign=&#34;top&#34;&gt;
+4
+   &lt;/td&gt;
+   &lt;td valign=&#34;top&#34;&gt;
+73 (взято из php)
+   &lt;/td&gt;
+   &lt;/tr&gt;
+   &lt;tr&gt;
+   &lt;td colspan=&#34;5&#34; valign=&#34;top&#34;&gt;
+   &lt;div&gt;
+&lt;b&gt;Дополнение от 23.04.2014&lt;/b&gt;
+   &lt;/div&gt;
+   &lt;/td&gt;
+   &lt;/tr&gt;
+   &lt;tr&gt;
+   &lt;td valign=&#34;top&#34;&gt;
+   &lt;div&gt;
+программист rails
+   &lt;/div&gt;
+   &lt;/td&gt;
+   &lt;td valign=&#34;top&#34;&gt;
+19
+   &lt;/td&gt;
+   &lt;td valign=&#34;top&#34;&gt;
+0
+   &lt;/td&gt;
+   &lt;td valign=&#34;top&#34;&gt;
+0
+   &lt;/td&gt;
+   &lt;td valign=&#34;top&#34;&gt;
+   &lt;/td&gt;
+   &lt;/tr&gt;
+   &lt;tr&gt;
+   &lt;td valign=&#34;top&#34;&gt;
+   &lt;div&gt;
+программист django
+   &lt;/div&gt;
+   &lt;/td&gt;
+   &lt;td valign=&#34;top&#34;&gt;
+12
+   &lt;/td&gt;
+   &lt;td valign=&#34;top&#34;&gt;
+0
+   &lt;/td&gt;
+   &lt;td valign=&#34;top&#34;&gt;
+0
+   &lt;/td&gt;
+   &lt;td valign=&#34;top&#34;&gt;
+   &lt;/td&gt;
+   &lt;/tr&gt;
+   &lt;tr&gt;
+   &lt;td valign=&#34;top&#34;&gt;
+   &lt;div&gt;
+программист haskell
+   &lt;/div&gt;
+   &lt;/td&gt;
+   &lt;td valign=&#34;top&#34;&gt;
+4
+   &lt;/td&gt;
+   &lt;td valign=&#34;top&#34;&gt;
+1
+   &lt;/td&gt;
+   &lt;td valign=&#34;top&#34;&gt;
+0
+   &lt;/td&gt;
+   &lt;td valign=&#34;top&#34;&gt;
+   &lt;/td&gt;
+   &lt;/tr&gt;
+   &lt;tr&gt;
+   &lt;td valign=&#34;top&#34;&gt;
+   &lt;div&gt;
+программист erlang
+   &lt;/div&gt;
+   &lt;/td&gt;
+   &lt;td valign=&#34;top&#34;&gt;
+9
+   &lt;/td&gt;
+   &lt;td valign=&#34;top&#34;&gt;
+1
+   &lt;/td&gt;
+   &lt;td valign=&#34;top&#34;&gt;
+2
+   &lt;/td&gt;
+   &lt;td valign=&#34;top&#34;&gt;
+   &lt;/td&gt;
+   &lt;/tr&gt;
+   &lt;/tbody&gt;
+   &lt;/table&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Часто в вакансиях, отмеченных &amp;ldquo;без опыта&amp;rdquo;, требуется опыт работы.
+Данные взяты с &lt;a href=&#34;http://rabota.yandex.ru&#34;&gt;http://rabota.yandex.ru&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Говорящие часы в Ubuntu</title>
+      <link>http://maratart.github.io/blog/govoryashhie-chasy-v-ubuntu/</link>
+      <pubDate>Wed, 22 Jan 2014 08:14:00 +0300</pubDate>
+      
+      <guid>http://maratart.github.io/blog/govoryashhie-chasy-v-ubuntu/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://maratart.github.io/blog/images/logo-ubuntu-orange.png&#34; alt=&#34;logo-ubuntu-orange&#34; /&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Установить движок и голос:
+&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;sudo apt-get install festival festvox-ru
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Произнести текущую дату и время:&lt;br /&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;date &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;+%H %M&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;\|&lt;/span&gt; festival --language russian --tts
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Подробнее:&lt;br /&gt;
+&lt;a href=&#34;http://forum.ubuntu.ru/index.php?topic=92123.0&#34;&gt;http://forum.ubuntu.ru/index.php?topic=92123.0&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;http://onedev.net/post/245&#34;&gt;http://onedev.net/post/245&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Как добавить новый виртуальный хост в Apache 2 на Ubuntu</title>
+      <link>http://maratart.github.io/blog/apache-add-virtual-site/</link>
+      <pubDate>Wed, 04 May 2011 13:44:00 +0300</pubDate>
+      
+      <guid>http://maratart.github.io/blog/apache-add-virtual-site/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://maratart.github.io/blog/images/logo-apache.gif&#34; alt=&#34;logo-apache&#34; /&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Скопировать в /etc/apache2/sites-available конфиг-файл нового сайта
+по образцу (default)&lt;/li&gt;
+&lt;li&gt;Исправить новый конфиг-файл сайта&lt;/li&gt;
+&lt;li&gt;sudo a2ensite newsite&lt;/li&gt;
+&lt;li&gt;sudo /etc/init.d/apache2 restart&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Язык Logo и компьютер Atari</title>
+      <link>http://maratart.github.io/blog/logo-i-atari/</link>
+      <pubDate>Sun, 20 Aug 1989 01:46:00 +0300</pubDate>
+      
+      <guid>http://maratart.github.io/blog/logo-i-atari/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://maratart.github.io/blog/images/Logo-150x150.png&#34; alt=&#34;Logo&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Впервые программировал на языке Logo и компьютере Atari.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

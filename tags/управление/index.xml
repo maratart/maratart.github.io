@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Управление on О моём IT</title>
+    <link>http://maratart.github.io/tags/%D1%83%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5/</link>
+    <description>Recent content in Управление on О моём IT</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ru-ru</language>
+    <lastBuildDate>Thu, 03 Apr 2014 11:57:00 +0300</lastBuildDate>
+    <atom:link href="http://maratart.github.io/tags/%D1%83%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>PoSEEDelki: как взаимодействовать с разработчиками</title>
+      <link>http://maratart.github.io/blog/poseedelki-03-04-2014/</link>
+      <pubDate>Thu, 03 Apr 2014 11:57:00 +0300</pubDate>
+      
+      <guid>http://maratart.github.io/blog/poseedelki-03-04-2014/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://maratart.github.io/blog/images/logo-poseedelki.png&#34; alt=&#34;logo-poseedelki&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Побывал на встрече &lt;a href=&#34;http://greenfield-project.ru/poseedelki/events/poseedelki_3_04_2014/&#34;&gt;&amp;rdquo;#poSEEDelki: как взаимодействовать с разработчиками&amp;rdquo;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Основные моменты работы с программистами и сложными проектами
+освещал Денис Петрухин, генеральный директор студии
+веб-разработки &lt;a href=&#34;http://futurecolors.ru&#34;&gt;Future Colors&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

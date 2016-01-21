@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Atari on О моём IT</title>
+    <link>http://maratart.github.io/tags/atari/</link>
+    <description>Recent content in Atari on О моём IT</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ru-ru</language>
+    <lastBuildDate>Sun, 20 Aug 1989 01:46:00 +0300</lastBuildDate>
+    <atom:link href="http://maratart.github.io/tags/atari/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Язык Logo и компьютер Atari</title>
+      <link>http://maratart.github.io/blog/logo-i-atari/</link>
+      <pubDate>Sun, 20 Aug 1989 01:46:00 +0300</pubDate>
+      
+      <guid>http://maratart.github.io/blog/logo-i-atari/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://maratart.github.io/blog/images/Logo-150x150.png&#34; alt=&#34;Logo&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Впервые программировал на языке Logo и компьютере Atari.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
