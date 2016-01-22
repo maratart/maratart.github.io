@@ -47,7 +47,9 @@
       <pubDate>Thu, 17 Apr 2014 04:25:00 +0300</pubDate>
       
       <guid>http://maratart.github.io/blog/proftpd-gruppy/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;http://maratart.github.io/blog/images/logo-proftpd.png&#34; alt=&#34;logo-proftpd&#34; /&gt;&lt;/p&gt;
+      <description>
+
+&lt;p&gt;&lt;img src=&#34;http://maratart.github.io/blog/images/logo-proftpd.png&#34; alt=&#34;logo-proftpd&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Задача:&lt;/strong&gt;&lt;/p&gt;
 
@@ -80,62 +82,67 @@
 &lt;li&gt;ftp2 — пользователь с доступом к каталогам B&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;strong&gt;Структура каталогов и права на доступ:&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;структура-каталогов-и-права-на-доступ:7c3c3fc68d9219ab7901e9e338b08d01&#34;&gt;Структура каталогов и права на доступ:&lt;/h2&gt;
 
-&lt;pre&gt;&lt;code&gt;| **каталог**    | **owner**    | **group**   | **permission**   |
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f3f3&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;| **каталог**    | **owner**    | **group**   | **permission**   |
 |----------------|--------------|-------------|------------------|
 | /ftp/files     | ftp_admin    | ftpgroup    | 750              |
 | /ftp/files/A   | ftp_admin    | ftpga       | 750              |
 | /ftp/files/B   | ftp_admin    | ftpgb       | 750              |
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2 id=&#34;настройки-proftpd-conf-в-ubuntu-12-04:7c3c3fc68d9219ab7901e9e338b08d01&#34;&gt;Настройки proftpd.conf в Ubuntu 12.04:&lt;/h2&gt;
 
 &lt;p&gt;&lt;img src=&#34;http://maratart.github.io/blog/images/logo-ubuntu-orange.png&#34; alt=&#34;logo-ubuntu-orange&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Настройки proftpd.conf в Ubuntu 12.04:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f3f3&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #336666&#34;&gt;RequireValidShell&lt;/span&gt; &lt;span style=&#34;color: #006699; font-weight: bold&#34;&gt;off&lt;/span&gt; #Не требовать оболочку для пользователя
+&lt;span style=&#34;color: #330099; font-weight: bold&#34;&gt;&amp;lt;Directory&lt;/span&gt; &lt;span style=&#34;color: #CC3300&#34;&gt;/ftp/files&lt;/span&gt;&lt;span style=&#34;color: #330099; font-weight: bold&#34;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span style=&#34;color: #336666&#34;&gt;HideNoAccess&lt;/span&gt; &lt;span style=&#34;color: #006699; font-weight: bold&#34;&gt;on&lt;/span&gt; #Не показывать каталоги с закрытым доступом
+  &lt;span style=&#34;color: #330099; font-weight: bold&#34;&gt;&amp;lt;Limit&lt;/span&gt; &lt;span style=&#34;color: #CC3300&#34;&gt;WRITE&lt;/span&gt;&lt;span style=&#34;color: #330099; font-weight: bold&#34;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color: #336666&#34;&gt;AllowUser&lt;/span&gt; ftp_admin #Право на запись фтп-администратору
+  &lt;span style=&#34;color: #330099; font-weight: bold&#34;&gt;&amp;lt;/Limit&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;color: #330099; font-weight: bold&#34;&gt;&amp;lt;/Directory&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 
-&lt;pre&gt;&lt;code&gt;RequireValidShell off #Не требовать оболочку для пользователя
-&amp;lt;Directory /ftp/files&amp;gt;
-  HideNoAccess on #Не показывать каталоги с закрытым доступом
-  &amp;lt;Limit WRITE&amp;gt;
-    AllowUser ftp_admin #Право на запись фтп-администратору
-  &amp;lt;/Limit&amp;gt;
-&amp;lt;/Directory&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;настройки-proftpd-conf-в-centos-6-5:7c3c3fc68d9219ab7901e9e338b08d01&#34;&gt;Настройки proftpd.conf в CentOS 6.5:&lt;/h2&gt;
 
 &lt;p&gt;&lt;img src=&#34;http://maratart.github.io/blog/images/logo-centos.png&#34; alt=&#34;logo-centos&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Настройки proftpd.conf в CentOS 6.5:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f3f3&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #330099; font-weight: bold&#34;&gt;&amp;lt;Directory&lt;/span&gt; &lt;span style=&#34;color: #CC3300&#34;&gt;/ftp/diler&lt;/span&gt;&lt;span style=&#34;color: #330099; font-weight: bold&#34;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span style=&#34;color: #336666&#34;&gt;HideNoAccess&lt;/span&gt; &lt;span style=&#34;color: #006699; font-weight: bold&#34;&gt;on&lt;/span&gt;
+  &lt;span style=&#34;color: #330099; font-weight: bold&#34;&gt;&amp;lt;Limit&lt;/span&gt; &lt;span style=&#34;color: #CC3300&#34;&gt;WRITE&lt;/span&gt;&lt;span style=&#34;color: #330099; font-weight: bold&#34;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color: #336666&#34;&gt;AllowUser&lt;/span&gt; diler_admin
+  &lt;span style=&#34;color: #330099; font-weight: bold&#34;&gt;&amp;lt;/Limit&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;color: #330099; font-weight: bold&#34;&gt;&amp;lt;/Directory&amp;gt;&lt;/span&gt;
 
-&lt;pre&gt;&lt;code&gt;&amp;lt;Directory /ftp/diler&amp;gt;
-  HideNoAccess on
-  &amp;lt;Limit WRITE&amp;gt;
-    AllowUser diler_admin
-  &amp;lt;/Limit&amp;gt;
-&amp;lt;/Directory&amp;gt;
+&lt;span style=&#34;color: #330099; font-weight: bold&#34;&gt;&amp;lt;Directory&lt;/span&gt; &lt;span style=&#34;color: #CC3300&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color: #330099; font-weight: bold&#34;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span style=&#34;color: #336666&#34;&gt;HideNoAccess&lt;/span&gt; onHideFiles ^\..*
+  &lt;span style=&#34;color: #330099; font-weight: bold&#34;&gt;&amp;lt;Limit&lt;/span&gt; &lt;span style=&#34;color: #CC3300&#34;&gt;ALL&lt;/span&gt;&lt;span style=&#34;color: #330099; font-weight: bold&#34;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color: #336666&#34;&gt;IgnoreHidden&lt;/span&gt; &lt;span style=&#34;color: #006699; font-weight: bold&#34;&gt;On&lt;/span&gt;
+  &lt;span style=&#34;color: #330099; font-weight: bold&#34;&gt;&amp;lt;/Limit&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;color: #330099; font-weight: bold&#34;&gt;&amp;lt;/Directory&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
 
-&amp;lt;Directory /&amp;gt;
-  HideNoAccess onHideFiles ^\..*
-  &amp;lt;Limit ALL&amp;gt;
-    IgnoreHidden On
-  &amp;lt;/Limit&amp;gt;
-&amp;lt;/Directory&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;для-отображения-в-браузере-имен-файлов-с-кириллицей:7c3c3fc68d9219ab7901e9e338b08d01&#34;&gt;Для отображения в браузере имен файлов с кириллицей:&lt;/h2&gt;
 
-&lt;p&gt;&lt;strong&gt;Для отображения в браузере имен файлов с кириллицей:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;lt;IfModule mod_lang.c&amp;gt;
-  UseEncoding utf-8 cp1251
-&amp;lt;/IfModule&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f3f3&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #330099; font-weight: bold&#34;&gt;&amp;lt;IfModule&lt;/span&gt; &lt;span style=&#34;color: #CC3300&#34;&gt;mod_lang.c&lt;/span&gt;&lt;span style=&#34;color: #330099; font-weight: bold&#34;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span style=&#34;color: #336666&#34;&gt;UseEncoding&lt;/span&gt; utf-8 cp1251
+&lt;span style=&#34;color: #330099; font-weight: bold&#34;&gt;&amp;lt;/IfModule&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
 
 &lt;p&gt;Отключить PAM авторизацию также.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Установка proftpd на CentOS 6:&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;установка-proftpd-на-centos-6:7c3c3fc68d9219ab7901e9e338b08d01&#34;&gt;Установка proftpd на CentOS 6:&lt;/h2&gt;
 
-&lt;pre&gt;&lt;code&gt;sudo rpm -Uvh http://download.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm
+&lt;p&gt;&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f3f3&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;sudo rpm -Uvh http://download.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm
 sudo yum install proftpd
 chkconfig –level 3 proftpd on
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
 
 &lt;p&gt;Также нужно открыть в iptables порт 21.
  &lt;/p&gt;
@@ -553,12 +560,12 @@ frontend
 
 &lt;ol&gt;
 &lt;li&gt;&lt;p&gt;Установить движок и голос:
-&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;sudo apt-get install festival festvox-ru
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f3f3&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;sudo apt-get install festival festvox-ru
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/p&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;Произнести текущую дату и время:&lt;br /&gt;
-&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;date &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;+%H %M&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;\|&lt;/span&gt; festival --language russian --tts
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f3f3&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;date &lt;span style=&#34;color: #CC3300&#34;&gt;&amp;quot;+%H %M&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #CC3300; font-weight: bold&#34;&gt;\|&lt;/span&gt; festival --language russian --tts
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;

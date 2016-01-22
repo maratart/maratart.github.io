@@ -104,7 +104,9 @@
         </header>
 
         <div class="article-body" itemprop="articleBody">
-          <p><img src="/blog/images/logo-proftpd.png" alt="logo-proftpd" /></p>
+          
+
+<p><img src="/blog/images/logo-proftpd.png" alt="logo-proftpd" /></p>
 
 <p><strong>Задача:</strong></p>
 
@@ -137,62 +139,67 @@
 <li>ftp2 — пользователь с доступом к каталогам B</li>
 </ul>
 
-<p><strong>Структура каталогов и права на доступ:</strong></p>
+<h2 id="структура-каталогов-и-права-на-доступ:7c3c3fc68d9219ab7901e9e338b08d01">Структура каталогов и права на доступ:</h2>
 
-<pre><code>| **каталог**    | **owner**    | **group**   | **permission**   |
+<div class="highlight" style="background: #f0f3f3"><pre style="line-height: 125%">| **каталог**    | **owner**    | **group**   | **permission**   |
 |----------------|--------------|-------------|------------------|
 | /ftp/files     | ftp_admin    | ftpgroup    | 750              |
 | /ftp/files/A   | ftp_admin    | ftpga       | 750              |
 | /ftp/files/B   | ftp_admin    | ftpgb       | 750              |
-</code></pre>
+</pre></div>
+
+
+<h2 id="настройки-proftpd-conf-в-ubuntu-12-04:7c3c3fc68d9219ab7901e9e338b08d01">Настройки proftpd.conf в Ubuntu 12.04:</h2>
 
 <p><img src="/blog/images/logo-ubuntu-orange.png" alt="logo-ubuntu-orange" /></p>
 
-<p><strong>Настройки proftpd.conf в Ubuntu 12.04:</strong></p>
+<div class="highlight" style="background: #f0f3f3"><pre style="line-height: 125%"><span style="color: #336666">RequireValidShell</span> <span style="color: #006699; font-weight: bold">off</span> #Не требовать оболочку для пользователя
+<span style="color: #330099; font-weight: bold">&lt;Directory</span> <span style="color: #CC3300">/ftp/files</span><span style="color: #330099; font-weight: bold">&gt;</span>
+  <span style="color: #336666">HideNoAccess</span> <span style="color: #006699; font-weight: bold">on</span> #Не показывать каталоги с закрытым доступом
+  <span style="color: #330099; font-weight: bold">&lt;Limit</span> <span style="color: #CC3300">WRITE</span><span style="color: #330099; font-weight: bold">&gt;</span>
+    <span style="color: #336666">AllowUser</span> ftp_admin #Право на запись фтп-администратору
+  <span style="color: #330099; font-weight: bold">&lt;/Limit&gt;</span>
+<span style="color: #330099; font-weight: bold">&lt;/Directory&gt;</span>
+</pre></div>
 
-<pre><code>RequireValidShell off #Не требовать оболочку для пользователя
-&lt;Directory /ftp/files&gt;
-  HideNoAccess on #Не показывать каталоги с закрытым доступом
-  &lt;Limit WRITE&gt;
-    AllowUser ftp_admin #Право на запись фтп-администратору
-  &lt;/Limit&gt;
-&lt;/Directory&gt;
-</code></pre>
+
+<h2 id="настройки-proftpd-conf-в-centos-6-5:7c3c3fc68d9219ab7901e9e338b08d01">Настройки proftpd.conf в CentOS 6.5:</h2>
 
 <p><img src="/blog/images/logo-centos.png" alt="logo-centos" /></p>
 
-<p><strong>Настройки proftpd.conf в CentOS 6.5:</strong></p>
+<p><div class="highlight" style="background: #f0f3f3"><pre style="line-height: 125%"><span style="color: #330099; font-weight: bold">&lt;Directory</span> <span style="color: #CC3300">/ftp/diler</span><span style="color: #330099; font-weight: bold">&gt;</span>
+  <span style="color: #336666">HideNoAccess</span> <span style="color: #006699; font-weight: bold">on</span>
+  <span style="color: #330099; font-weight: bold">&lt;Limit</span> <span style="color: #CC3300">WRITE</span><span style="color: #330099; font-weight: bold">&gt;</span>
+    <span style="color: #336666">AllowUser</span> diler_admin
+  <span style="color: #330099; font-weight: bold">&lt;/Limit&gt;</span>
+<span style="color: #330099; font-weight: bold">&lt;/Directory&gt;</span>
 
-<pre><code>&lt;Directory /ftp/diler&gt;
-  HideNoAccess on
-  &lt;Limit WRITE&gt;
-    AllowUser diler_admin
-  &lt;/Limit&gt;
-&lt;/Directory&gt;
+<span style="color: #330099; font-weight: bold">&lt;Directory</span> <span style="color: #CC3300">/</span><span style="color: #330099; font-weight: bold">&gt;</span>
+  <span style="color: #336666">HideNoAccess</span> onHideFiles ^\..*
+  <span style="color: #330099; font-weight: bold">&lt;Limit</span> <span style="color: #CC3300">ALL</span><span style="color: #330099; font-weight: bold">&gt;</span>
+    <span style="color: #336666">IgnoreHidden</span> <span style="color: #006699; font-weight: bold">On</span>
+  <span style="color: #330099; font-weight: bold">&lt;/Limit&gt;</span>
+<span style="color: #330099; font-weight: bold">&lt;/Directory&gt;</span>
+</pre></div>
+</p>
 
-&lt;Directory /&gt;
-  HideNoAccess onHideFiles ^\..*
-  &lt;Limit ALL&gt;
-    IgnoreHidden On
-  &lt;/Limit&gt;
-&lt;/Directory&gt;
-</code></pre>
+<h2 id="для-отображения-в-браузере-имен-файлов-с-кириллицей:7c3c3fc68d9219ab7901e9e338b08d01">Для отображения в браузере имен файлов с кириллицей:</h2>
 
-<p><strong>Для отображения в браузере имен файлов с кириллицей:</strong></p>
-
-<pre><code>&lt;IfModule mod_lang.c&gt;
-  UseEncoding utf-8 cp1251
-&lt;/IfModule&gt;
-</code></pre>
+<p><div class="highlight" style="background: #f0f3f3"><pre style="line-height: 125%"><span style="color: #330099; font-weight: bold">&lt;IfModule</span> <span style="color: #CC3300">mod_lang.c</span><span style="color: #330099; font-weight: bold">&gt;</span>
+  <span style="color: #336666">UseEncoding</span> utf-8 cp1251
+<span style="color: #330099; font-weight: bold">&lt;/IfModule&gt;</span>
+</pre></div>
+</p>
 
 <p>Отключить PAM авторизацию также.</p>
 
-<p><strong>Установка proftpd на CentOS 6:</strong></p>
+<h2 id="установка-proftpd-на-centos-6:7c3c3fc68d9219ab7901e9e338b08d01">Установка proftpd на CentOS 6:</h2>
 
-<pre><code>sudo rpm -Uvh http://download.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm
+<p><div class="highlight" style="background: #f0f3f3"><pre style="line-height: 125%">sudo rpm -Uvh http://download.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm
 sudo yum install proftpd
 chkconfig –level 3 proftpd on
-</code></pre>
+</pre></div>
+</p>
 
 <p>Также нужно открыть в iptables порт 21.
  </p>
