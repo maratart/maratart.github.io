@@ -565,7 +565,7 @@ frontend
 &lt;/p&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;Произнести текущую дату и время:&lt;br /&gt;
-&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f3f3&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;date &lt;span style=&#34;color: #CC3300&#34;&gt;&amp;quot;+%H %M&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #CC3300; font-weight: bold&#34;&gt;\|&lt;/span&gt; festival --language russian --tts
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f3f3&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;date &lt;span style=&#34;color: #CC3300&#34;&gt;&amp;quot;+%H %M&amp;quot;&lt;/span&gt; | festival --language russian --tts
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
