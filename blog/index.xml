@@ -240,310 +240,335 @@ junior-программистов Python и Django. Спрос есть. И не
 сегодняшний день / 26 марта 2014 года /  в Москве и Московской области:&lt;/p&gt;
 
 &lt;p&gt;&lt;table border=&#34;1&#34;&gt;
-   &lt;tbody&gt;
-   &lt;tr&gt;
-   &lt;td valign=&#34;top&#34;&gt;
-&lt;b&gt;Вакансия&lt;/b&gt;
-   &lt;/td&gt;
-   &lt;td valign=&#34;top&#34;&gt;
-&lt;b&gt;Общее количество&lt;/b&gt;
-   &lt;/td&gt;
-   &lt;td valign=&#34;top&#34;&gt;
-&lt;b&gt;С гибким графиком&lt;/b&gt;
-   &lt;/td&gt;
-   &lt;td valign=&#34;top&#34;&gt;
-&lt;b&gt;Без опыта&lt;/b&gt;
-   &lt;/td&gt;
-   &lt;td valign=&#34;top&#34;&gt;
-&lt;b&gt;Средняя зарплата, тыс. руб&lt;/b&gt;
-   &lt;/td&gt;
-   &lt;/tr&gt;
-   &lt;tr&gt;
-   &lt;td valign=&#34;top&#34;&gt;
-программист java
-   &lt;/td&gt;
-   &lt;td valign=&#34;top&#34;&gt;
-317
-   &lt;/td&gt;
-   &lt;td valign=&#34;top&#34;&gt;
-15
-   &lt;/td&gt;
-   &lt;td valign=&#34;top&#34;&gt;
-14
-   &lt;/td&gt;
-   &lt;td valign=&#34;top&#34;&gt;
-107
-   &lt;/td&gt;
-   &lt;/tr&gt;
-   &lt;tr&gt;
-   &lt;td valign=&#34;top&#34;&gt;
-программист android
-   &lt;/td&gt;
-   &lt;td valign=&#34;top&#34;&gt;
-84
-   &lt;/td&gt;
-   &lt;td valign=&#34;top&#34;&gt;
-6
-   &lt;/td&gt;
-   &lt;td valign=&#34;top&#34;&gt;
-1
-   &lt;/td&gt;
-   &lt;td valign=&#34;top&#34;&gt;
-100
-   &lt;/td&gt;
-   &lt;/tr&gt;
-   &lt;tr&gt;
-   &lt;td valign=&#34;top&#34;&gt;
-программист iOS
-   &lt;/td&gt;
-   &lt;td valign=&#34;top&#34;&gt;
-83
-   &lt;/td&gt;
-   &lt;td valign=&#34;top&#34;&gt;
-9
-   &lt;/td&gt;
-   &lt;td valign=&#34;top&#34;&gt;
-5
-   &lt;/td&gt;
-   &lt;td valign=&#34;top&#34;&gt;
-97
-   &lt;/td&gt;
-   &lt;/tr&gt;
-   &lt;tr&gt;
-   &lt;td valign=&#34;top&#34;&gt;
-программист python
-   &lt;/td&gt;
-   &lt;td valign=&#34;top&#34;&gt;
-72
-   &lt;/td&gt;
-   &lt;td valign=&#34;top&#34;&gt;
-6
-   &lt;/td&gt;
-   &lt;td valign=&#34;top&#34;&gt;
-4
-   &lt;/td&gt;
-   &lt;td valign=&#34;top&#34;&gt;
-91
-   &lt;/td&gt;
-   &lt;/tr&gt;
-   &lt;tr&gt;
-   &lt;td valign=&#34;top&#34;&gt;
-программист django
-   &lt;/td&gt;
-   &lt;td valign=&#34;top&#34;&gt;
-14
-   &lt;/td&gt;
-   &lt;td valign=&#34;top&#34;&gt;
-3
-   &lt;/td&gt;
-   &lt;td valign=&#34;top&#34;&gt;
-2
-   &lt;/td&gt;
-   &lt;td valign=&#34;top&#34;&gt;
-91 (взято из python)
-   &lt;/td&gt;
-   &lt;/tr&gt;
-   &lt;tr&gt;
-   &lt;td valign=&#34;top&#34;&gt;
-программист php
-   &lt;/td&gt;
-   &lt;td valign=&#34;top&#34;&gt;
-455
-   &lt;/td&gt;
-   &lt;td valign=&#34;top&#34;&gt;
-25
-   &lt;/td&gt;
-   &lt;td valign=&#34;top&#34;&gt;
-17
-   &lt;/td&gt;
-   &lt;td valign=&#34;top&#34;&gt;
-73
-   &lt;/td&gt;
-   &lt;/tr&gt;
-   &lt;tr&gt;
-   &lt;td valign=&#34;top&#34;&gt;
-программист scala
-   &lt;/td&gt;
-   &lt;td valign=&#34;top&#34;&gt;
-23
-   &lt;/td&gt;
-   &lt;td valign=&#34;top&#34;&gt;
-0
-   &lt;/td&gt;
-   &lt;td valign=&#34;top&#34;&gt;
-3
-   &lt;/td&gt;
-   &lt;td valign=&#34;top&#34;&gt;
-107 (взято из java)
-   &lt;/td&gt;
-   &lt;/tr&gt;
-   &lt;tr&gt;
-   &lt;td colspan=&#34;5&#34; valign=&#34;top&#34;&gt;
-&lt;b&gt;Дополнение от 03.04.2014&lt;/b&gt;
-   &lt;/td&gt;
-   &lt;/tr&gt;
-   &lt;tr&gt;
-   &lt;td valign=&#34;top&#34;&gt;
-Node.js
-   &lt;/td&gt;
-   &lt;td valign=&#34;top&#34;&gt;
-9
-   &lt;/td&gt;
-   &lt;td valign=&#34;top&#34;&gt;
-1
-   &lt;/td&gt;
-   &lt;td valign=&#34;top&#34;&gt;
-0
-   &lt;/td&gt;
-   &lt;td valign=&#34;top&#34;&gt;
-От 70 до 180 (средней нет)
-   &lt;/td&gt;
-   &lt;/tr&gt;
-   &lt;tr&gt;
-   &lt;td valign=&#34;top&#34;&gt;
-программист ruby
-   &lt;/td&gt;
-   &lt;td valign=&#34;top&#34;&gt;
-38
-   &lt;/td&gt;
-   &lt;td valign=&#34;top&#34;&gt;
-2
-   &lt;/td&gt;
-   &lt;td valign=&#34;top&#34;&gt;
-0
-   &lt;/td&gt;
-   &lt;td valign=&#34;top&#34;&gt;
-85
-   &lt;/td&gt;
-   &lt;/tr&gt;
-   &lt;tr&gt;
-   &lt;td colspan=&#34;5&#34; valign=&#34;top&#34;&gt;
-&lt;b&gt;Дополнение от 04.04.2014&lt;/b&gt;
-   &lt;/td&gt;
-   &lt;/tr&gt;
-   &lt;tr&gt;
-   &lt;td valign=&#34;top&#34;&gt;
-frontend
-   &lt;/td&gt;
-   &lt;td valign=&#34;top&#34;&gt;
-138
-   &lt;/td&gt;
-   &lt;td valign=&#34;top&#34;&gt;
-6
-   &lt;/td&gt;
-   &lt;td valign=&#34;top&#34;&gt;
-5
-   &lt;/td&gt;
-   &lt;td valign=&#34;top&#34;&gt;
-   &lt;/td&gt;
-   &lt;/tr&gt;
-   &lt;tr&gt;
-   &lt;td colspan=&#34;5&#34; valign=&#34;top&#34;&gt;
-&lt;b&gt;Дополнение от 06.04.2014&lt;/b&gt;
-   &lt;/td&gt;
-   &lt;/tr&gt;
-   &lt;tr&gt;
-   &lt;td valign=&#34;top&#34;&gt;
-   &lt;div&gt;
-программист bitrix
-   &lt;/div&gt;
-   &lt;/td&gt;
-   &lt;td valign=&#34;top&#34;&gt;
-   &lt;div&gt;
-73
-   &lt;/div&gt;
-   &lt;/td&gt;
-   &lt;td valign=&#34;top&#34;&gt;
-5
-   &lt;/td&gt;
-   &lt;td valign=&#34;top&#34;&gt;
-4
-   &lt;/td&gt;
-   &lt;td valign=&#34;top&#34;&gt;
-73 (взято из php)
-   &lt;/td&gt;
-   &lt;/tr&gt;
-   &lt;tr&gt;
-   &lt;td colspan=&#34;5&#34; valign=&#34;top&#34;&gt;
-   &lt;div&gt;
-&lt;b&gt;Дополнение от 23.04.2014&lt;/b&gt;
-   &lt;/div&gt;
-   &lt;/td&gt;
-   &lt;/tr&gt;
-   &lt;tr&gt;
-   &lt;td valign=&#34;top&#34;&gt;
-   &lt;div&gt;
-программист rails
-   &lt;/div&gt;
-   &lt;/td&gt;
-   &lt;td valign=&#34;top&#34;&gt;
-19
-   &lt;/td&gt;
-   &lt;td valign=&#34;top&#34;&gt;
-0
-   &lt;/td&gt;
-   &lt;td valign=&#34;top&#34;&gt;
-0
-   &lt;/td&gt;
-   &lt;td valign=&#34;top&#34;&gt;
-   &lt;/td&gt;
-   &lt;/tr&gt;
-   &lt;tr&gt;
-   &lt;td valign=&#34;top&#34;&gt;
-   &lt;div&gt;
-программист django
-   &lt;/div&gt;
-   &lt;/td&gt;
-   &lt;td valign=&#34;top&#34;&gt;
-12
-   &lt;/td&gt;
-   &lt;td valign=&#34;top&#34;&gt;
-0
-   &lt;/td&gt;
-   &lt;td valign=&#34;top&#34;&gt;
-0
-   &lt;/td&gt;
-   &lt;td valign=&#34;top&#34;&gt;
-   &lt;/td&gt;
-   &lt;/tr&gt;
-   &lt;tr&gt;
-   &lt;td valign=&#34;top&#34;&gt;
-   &lt;div&gt;
-программист haskell
-   &lt;/div&gt;
-   &lt;/td&gt;
-   &lt;td valign=&#34;top&#34;&gt;
-4
-   &lt;/td&gt;
-   &lt;td valign=&#34;top&#34;&gt;
-1
-   &lt;/td&gt;
-   &lt;td valign=&#34;top&#34;&gt;
-0
-   &lt;/td&gt;
-   &lt;td valign=&#34;top&#34;&gt;
-   &lt;/td&gt;
-   &lt;/tr&gt;
-   &lt;tr&gt;
-   &lt;td valign=&#34;top&#34;&gt;
-   &lt;div&gt;
-программист erlang
-   &lt;/div&gt;
-   &lt;/td&gt;
-   &lt;td valign=&#34;top&#34;&gt;
-9
-   &lt;/td&gt;
-   &lt;td valign=&#34;top&#34;&gt;
-1
-   &lt;/td&gt;
-   &lt;td valign=&#34;top&#34;&gt;
-2
-   &lt;/td&gt;
-   &lt;td valign=&#34;top&#34;&gt;
-   &lt;/td&gt;
-   &lt;/tr&gt;
-   &lt;/tbody&gt;
-   &lt;/table&gt;&lt;br /&gt;&lt;/p&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td valign=&#34;top&#34;&gt;
+                &lt;b&gt;Вакансия&lt;/b&gt;
+            &lt;/td&gt;
+            &lt;td valign=&#34;top&#34;&gt;
+                &lt;b&gt;Общее количество&lt;/b&gt;
+            &lt;/td&gt;
+            &lt;td valign=&#34;top&#34;&gt;
+                &lt;b&gt;С гибким графиком&lt;/b&gt;
+            &lt;/td&gt;
+            &lt;td valign=&#34;top&#34;&gt;
+                &lt;b&gt;Без опыта&lt;/b&gt;
+            &lt;/td&gt;
+            &lt;td valign=&#34;top&#34;&gt;
+                &lt;b&gt;Средняя зарплата, тыс. руб&lt;/b&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td valign=&#34;top&#34;&gt;
+                программист java
+            &lt;/td&gt;
+            &lt;td valign=&#34;top&#34;&gt;
+                317
+            &lt;/td&gt;
+            &lt;td valign=&#34;top&#34;&gt;
+                15
+            &lt;/td&gt;
+            &lt;td valign=&#34;top&#34;&gt;
+                14
+            &lt;/td&gt;
+            &lt;td valign=&#34;top&#34;&gt;
+                107
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td valign=&#34;top&#34;&gt;
+                программист android
+            &lt;/td&gt;
+            &lt;td valign=&#34;top&#34;&gt;
+                84
+            &lt;/td&gt;
+            &lt;td valign=&#34;top&#34;&gt;
+                6
+            &lt;/td&gt;
+            &lt;td valign=&#34;top&#34;&gt;
+                1
+            &lt;/td&gt;
+            &lt;td valign=&#34;top&#34;&gt;
+                100
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td valign=&#34;top&#34;&gt;
+                программист iOS
+            &lt;/td&gt;
+            &lt;td valign=&#34;top&#34;&gt;
+                83
+            &lt;/td&gt;
+            &lt;td valign=&#34;top&#34;&gt;
+                9
+            &lt;/td&gt;
+            &lt;td valign=&#34;top&#34;&gt;
+                5
+            &lt;/td&gt;
+            &lt;td valign=&#34;top&#34;&gt;
+                97
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td valign=&#34;top&#34;&gt;
+                программист python
+            &lt;/td&gt;
+            &lt;td valign=&#34;top&#34;&gt;
+                72
+            &lt;/td&gt;
+            &lt;td valign=&#34;top&#34;&gt;
+                6
+            &lt;/td&gt;
+            &lt;td valign=&#34;top&#34;&gt;
+                4
+            &lt;/td&gt;
+            &lt;td valign=&#34;top&#34;&gt;
+                91
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td valign=&#34;top&#34;&gt;
+                программист django
+            &lt;/td&gt;
+            &lt;td valign=&#34;top&#34;&gt;
+                14
+            &lt;/td&gt;
+            &lt;td valign=&#34;top&#34;&gt;
+                3
+            &lt;/td&gt;
+            &lt;td valign=&#34;top&#34;&gt;
+                2
+            &lt;/td&gt;
+            &lt;td valign=&#34;top&#34;&gt;
+                91 (взято из python)
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td valign=&#34;top&#34;&gt;
+                программист php
+            &lt;/td&gt;
+            &lt;td valign=&#34;top&#34;&gt;
+                455
+            &lt;/td&gt;
+            &lt;td valign=&#34;top&#34;&gt;
+                25
+            &lt;/td&gt;
+            &lt;td valign=&#34;top&#34;&gt;
+                17
+            &lt;/td&gt;
+            &lt;td valign=&#34;top&#34;&gt;
+                73
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td valign=&#34;top&#34;&gt;
+                программист scala
+            &lt;/td&gt;
+            &lt;td valign=&#34;top&#34;&gt;
+                23
+            &lt;/td&gt;
+            &lt;td valign=&#34;top&#34;&gt;
+                0
+            &lt;/td&gt;
+            &lt;td valign=&#34;top&#34;&gt;
+                3
+            &lt;/td&gt;
+            &lt;td valign=&#34;top&#34;&gt;
+                107 (взято из java)
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td colspan=&#34;5&#34; valign=&#34;top&#34;&gt;
+                &lt;b&gt;Дополнение от 03.04.2014&lt;/b&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td valign=&#34;top&#34;&gt;
+                Node.js
+            &lt;/td&gt;
+            &lt;td valign=&#34;top&#34;&gt;
+                9
+            &lt;/td&gt;
+            &lt;td valign=&#34;top&#34;&gt;
+                1
+            &lt;/td&gt;
+            &lt;td valign=&#34;top&#34;&gt;
+                0
+            &lt;/td&gt;
+            &lt;td valign=&#34;top&#34;&gt;
+                От 70 до 180 (средней нет)
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td valign=&#34;top&#34;&gt;
+                программист ruby
+            &lt;/td&gt;
+            &lt;td valign=&#34;top&#34;&gt;
+                38
+            &lt;/td&gt;
+            &lt;td valign=&#34;top&#34;&gt;
+                2
+            &lt;/td&gt;
+            &lt;td valign=&#34;top&#34;&gt;
+                0
+            &lt;/td&gt;
+            &lt;td valign=&#34;top&#34;&gt;
+                85
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td colspan=&#34;5&#34; valign=&#34;top&#34;&gt;
+                &lt;b&gt;Дополнение от 04.04.2014&lt;/b&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td valign=&#34;top&#34;&gt;
+                frontend
+            &lt;/td&gt;
+            &lt;td valign=&#34;top&#34;&gt;
+                138
+            &lt;/td&gt;
+            &lt;td valign=&#34;top&#34;&gt;
+                6
+            &lt;/td&gt;
+            &lt;td valign=&#34;top&#34;&gt;
+                5
+            &lt;/td&gt;
+            &lt;td valign=&#34;top&#34;&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td colspan=&#34;5&#34; valign=&#34;top&#34;&gt;
+                &lt;b&gt;Дополнение от 06.04.2014&lt;/b&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td valign=&#34;top&#34;&gt;
+                &lt;div&gt;
+                    программист bitrix
+                &lt;/div&gt;
+            &lt;/td&gt;
+            &lt;td valign=&#34;top&#34;&gt;
+                &lt;div&gt;
+                    73
+                &lt;/div&gt;
+            &lt;/td&gt;
+            &lt;td valign=&#34;top&#34;&gt;
+                5
+            &lt;/td&gt;
+            &lt;td valign=&#34;top&#34;&gt;
+                4
+            &lt;/td&gt;
+            &lt;td valign=&#34;top&#34;&gt;
+                73 (взято из php)
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td colspan=&#34;5&#34; valign=&#34;top&#34;&gt;
+                &lt;div&gt;
+                    &lt;b&gt;Дополнение от 23.04.2014&lt;/b&gt;
+                &lt;/div&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td valign=&#34;top&#34;&gt;
+                &lt;div&gt;
+                    программист rails
+                &lt;/div&gt;
+            &lt;/td&gt;
+            &lt;td valign=&#34;top&#34;&gt;
+                19
+            &lt;/td&gt;
+            &lt;td valign=&#34;top&#34;&gt;
+                0
+            &lt;/td&gt;
+            &lt;td valign=&#34;top&#34;&gt;
+                0
+            &lt;/td&gt;
+            &lt;td valign=&#34;top&#34;&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td valign=&#34;top&#34;&gt;
+                &lt;div&gt;
+                    программист django
+                &lt;/div&gt;
+            &lt;/td&gt;
+            &lt;td valign=&#34;top&#34;&gt;
+                12
+            &lt;/td&gt;
+            &lt;td valign=&#34;top&#34;&gt;
+                0
+            &lt;/td&gt;
+            &lt;td valign=&#34;top&#34;&gt;
+                0
+            &lt;/td&gt;
+            &lt;td valign=&#34;top&#34;&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td valign=&#34;top&#34;&gt;
+                &lt;div&gt;
+                    программист haskell
+                &lt;/div&gt;
+            &lt;/td&gt;
+            &lt;td valign=&#34;top&#34;&gt;
+                4
+            &lt;/td&gt;
+            &lt;td valign=&#34;top&#34;&gt;
+                1
+            &lt;/td&gt;
+            &lt;td valign=&#34;top&#34;&gt;
+                0
+            &lt;/td&gt;
+            &lt;td valign=&#34;top&#34;&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td valign=&#34;top&#34;&gt;
+                &lt;div&gt;
+                    программист erlang
+                &lt;/div&gt;
+            &lt;/td&gt;
+            &lt;td valign=&#34;top&#34;&gt;
+                9
+            &lt;/td&gt;
+            &lt;td valign=&#34;top&#34;&gt;
+                1
+            &lt;/td&gt;
+            &lt;td valign=&#34;top&#34;&gt;
+                2
+            &lt;/td&gt;
+            &lt;td valign=&#34;top&#34;&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+                &lt;tr&gt;
+            &lt;td colspan=&#34;5&#34; valign=&#34;top&#34;&gt;
+                &lt;div&gt;
+                    &lt;b&gt;Дополнение от 1.02.2016&lt;/b&gt;
+                &lt;/div&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td valign=&#34;top&#34;&gt;
+                &lt;div&gt;
+                    программист golang
+                &lt;/div&gt;
+            &lt;/td&gt;
+            &lt;td valign=&#34;top&#34;&gt;
+                6
+            &lt;/td&gt;
+            &lt;td valign=&#34;top&#34;&gt;
+                0
+            &lt;/td&gt;
+            &lt;td valign=&#34;top&#34;&gt;
+                0
+            &lt;/td&gt;
+            &lt;td valign=&#34;top&#34;&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;Часто в вакансиях, отмеченных &amp;ldquo;без опыта&amp;rdquo;, требуется опыт работы.
 Данные взяты с &lt;a href=&#34;http://rabota.yandex.ru&#34;&gt;http://rabota.yandex.ru&lt;/a&gt;.&lt;/p&gt;
