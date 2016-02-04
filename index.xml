@@ -10,7 +10,7 @@
     <atom:link href="http://maratart.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Git — для начинающих. Тренировка, ветки, шпаргалки</title>
+      <title>Git для начинающих. Тренировка, ветки, шпаргалки</title>
       <link>http://maratart.github.io/blog/git-rabota-vetki-shpargalki/</link>
       <pubDate>Thu, 04 Feb 2016 13:30:53 +0300</pubDate>
       
@@ -23,6 +23,7 @@
 &lt;li&gt;Официальная книга: &lt;a href=&#34;http://git-scm.com/book/ru/v1&#34;&gt;http://git-scm.com/book/ru/v1&lt;/a&gt;&lt;br /&gt;&lt;/li&gt;
 &lt;li&gt;Онлайн тренировка управления ветками в git: &lt;a href=&#34;http://pcottle.github.io/learnGitBranching/&#34;&gt;http://pcottle.github.io/learnGitBranching/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Онлайн курс: &lt;a href=&#34;http://githowto.com/ru&#34;&gt;http://githowto.com/ru&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Инструкция-шпаргалка для начинающих: &lt;a href=&#34;http://habrahabr.ru/post/123111/&#34;&gt;http://habrahabr.ru/post/123111/&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>
