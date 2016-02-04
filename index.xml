@@ -6,8 +6,26 @@
     <description>Recent content on О моём IT</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ru-ru</language>
-    <lastBuildDate>Thu, 21 Jan 2016 22:28:05 +0300</lastBuildDate>
+    <lastBuildDate>Thu, 04 Feb 2016 13:30:53 +0300</lastBuildDate>
     <atom:link href="http://maratart.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Git — для начинающих. Тренировка, ветки, шпаргалки</title>
+      <link>http://maratart.github.io/blog/git-rabota-vetki-shpargalki/</link>
+      <pubDate>Thu, 04 Feb 2016 13:30:53 +0300</pubDate>
+      
+      <guid>http://maratart.github.io/blog/git-rabota-vetki-shpargalki/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://maratart.github.io/blog/images/logo-git.png&#34; alt=&#34;logo-git&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Документация по git на русском языке:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Официальная книга: &lt;a href=&#34;http://git-scm.com/book/ru/v1&#34;&gt;http://git-scm.com/book/ru/v1&lt;/a&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Онлайн тренировка управления ветками в git: &lt;a href=&#34;http://pcottle.github.io/learnGitBranching/&#34;&gt;http://pcottle.github.io/learnGitBranching/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Онлайн курс: &lt;a href=&#34;http://githowto.com/ru&#34;&gt;http://githowto.com/ru&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>Генератор hugo &#43; хостинг githubpages</title>
