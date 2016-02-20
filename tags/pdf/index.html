@@ -14,12 +14,12 @@
     <link rel="alternate" type="application/rss+xml" title="RSS" href="http://maratart.github.io//index.xml">
 
     
-    <title>О моём IT</title>
-    <meta property='og:title' content="О моём IT">
-    <meta property="og:type" content="website">
+    <title>Pdf - О моём IT</title>
+    <meta property='og:title' content="Pdf - О моём IT">
+    <meta property="og:type" content="article">
     
 
-    <meta property="og:url" content="http://maratart.github.io/">
+    <meta property="og:url" content="http://maratart.github.io/tags/pdf/">
     
     
 
@@ -52,69 +52,23 @@
       <div class="container">
 
 
-<div class="index">
+<div class="list">
 
   <div class="row">
     <div class="col-md-8">
-      
-      <article class="li">
-  <header>
-    <div class="date">Wed, 22 Jan 2014</div>
-    <div class="title"><a href="http://maratart.github.io/blog/govoryashhie-chasy-v-ubuntu/">Говорящие часы в Ubuntu</a></div>
-  </header>
-  <div class="body"><p><img src="/blog/images/logo-ubuntu-orange.png" alt="logo-ubuntu-orange" /></p>
-
-<ol>
-<li><p>Установить движок и голос:
-<div class="highlight" style="background: #f0f3f3"><pre style="line-height: 125%">sudo apt-get install festival festvox-ru
-</pre></div>
-</p></li>
-
-<li><p>Произнести текущую дату и время:<br />
-<div class="highlight" style="background: #f0f3f3"><pre style="line-height: 125%">date <span style="color: #CC3300">&quot;+%H %M&quot;</span> | festival --language russian --tts
-</pre></div>
-</p></li>
-</ol>
-
-<p>Подробнее:<br />
-<a href="http://forum.ubuntu.ru/index.php?topic=92123.0">http://forum.ubuntu.ru/index.php?topic=92123.0</a><br />
-<a href="http://onedev.net/post/245">http://onedev.net/post/245</a></p>
-</div>
-
-  
-</article>
-<hr>
+      <header class="page-title">Pdf</header>
 
       
       <article class="li">
   <header>
-    <div class="date">Wed, 4 May 2011</div>
-    <div class="title"><a href="http://maratart.github.io/blog/apache-add-virtual-site/">Как добавить новый виртуальный хост в Apache 2 на Ubuntu</a></div>
+    <div class="date">Sat, 20 Feb 2016</div>
+    <div class="title"><a href="http://maratart.github.io/blog/change-pdf-meta/">Как заменить мета-тег в нескольких документах pdf автоматически</a></div>
   </header>
-  <div class="body"><p><img src="/blog/images/logo-apache.gif" alt="logo-apache" /></p>
+  <div class="body"><p><img src="/blog/images/logo-pdftk.png" alt="logo-pdftk" /></p>
 
-<ol>
-<li>Скопировать в /etc/apache2/sites-available конфиг-файл нового сайта
-по образцу (default)</li>
-<li>Исправить новый конфиг-файл сайта</li>
-<li>sudo a2ensite newsite</li>
-<li>sudo /etc/init.d/apache2 restart</li>
-</ol>
-</div>
+<p>Нужно было заменить в нескольких десятках pdf-файлов мета-свойство Title. Оно отображается, например, в браузере при просмотре соответствуюещго pdf-файла.</p>
 
-  
-</article>
-<hr>
-
-      
-      <article class="li">
-  <header>
-    <div class="date">Sun, 20 Aug 1989</div>
-    <div class="title"><a href="http://maratart.github.io/blog/logo-i-atari/">Язык Logo и компьютер Atari</a></div>
-  </header>
-  <div class="body"><p><img src="/blog/images/Logo-Atari.png" alt="Logo" /></p>
-
-<p>Впервые программировал на языке Logo и компьютере Atari.</p>
+<p>Написал для этого на Go утилиту <a href="https://github.com/maratart/change-pdf-meta">change-pdf-meta</a> в качестве обертки для pdftk.</p>
 </div>
 
   
@@ -123,19 +77,6 @@
 
       
       
-<nav>
-  <ul class="pager">
-    
-    <li><a href="/page/1">←</a></li>
-    
-
-    
-    <li class="disabled"><a href="#">→</a></li>
-    
-
-  </ul>
-</nav>
-
 
 
     </div>
@@ -171,48 +112,6 @@
       
     </div>
   </div>
-
-
-
-  
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h2 class="panel-title">  Рубрики </h2>
-    </div>
-    <div class="list-group">
-      
-    </div>
-  </div>
-  
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h2 class="panel-title"> Метки  </h2>
-    </div>
-    <div class="list-group">
-      
-      <a href="http://maratart.github.io/tags/ubuntu" class="list-group-item">ubuntu</a>
-      
-      <a href="http://maratart.github.io/tags/%D0%B7%D0%B0%D1%80%D0%BF%D0%BB%D0%B0%D1%82%D1%8B" class="list-group-item">зарплаты</a>
-      
-      <a href="http://maratart.github.io/tags/%D0%B2%D0%B0%D0%BA%D0%B0%D0%BD%D1%81%D0%B8%D0%B8" class="list-group-item">вакансии</a>
-      
-      <a href="http://maratart.github.io/tags/django" class="list-group-item">django</a>
-      
-      <a href="http://maratart.github.io/tags/%D0%B2%D1%81%D1%82%D1%80%D0%B5%D1%87%D0%B8" class="list-group-item">встречи</a>
-      
-      <a href="http://maratart.github.io/tags/pdf" class="list-group-item">pdf</a>
-      
-      <a href="http://maratart.github.io/tags/proftpd" class="list-group-item">proftpd</a>
-      
-      <a href="http://maratart.github.io/tags/%D1%83%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5" class="list-group-item">управление</a>
-      
-      <a href="http://maratart.github.io/tags/apache" class="list-group-item">apache</a>
-      
-      <a href="http://maratart.github.io/tags/centos" class="list-group-item">centos</a>
-      
-    </div>
-  </div>
-  
 
 
 
