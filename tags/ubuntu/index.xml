@@ -155,8 +155,8 @@ chkconfig –level 3 proftpd on
 &lt;li&gt;Скопировать в /etc/apache2/sites-available конфиг-файл нового сайта
 по образцу (default)&lt;/li&gt;
 &lt;li&gt;Исправить новый конфиг-файл сайта&lt;/li&gt;
-&lt;li&gt;sudo a2ensite newsite&lt;/li&gt;
-&lt;li&gt;sudo /etc/init.d/apache2 restart&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;sudo a2ensite newsite&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;sudo /etc/init.d/apache2 restart&lt;/code&gt;&lt;/li&gt;
 &lt;/ol&gt;
 </description>
     </item>
