@@ -18,7 +18,7 @@
       <description>&lt;p&gt;&lt;img src=&#34;http://maratart.github.io/blog/images/logo-apache.gif&#34; alt=&#34;logo-apache&#34; /&gt;&lt;/p&gt;
 
 &lt;ol&gt;
-&lt;li&gt;Скопировать в /etc/apache2/sites-available конфиг-файл нового сайта
+&lt;li&gt;Скопировать в &lt;code&gt;/etc/apache2/sites-available&lt;/code&gt; конфиг-файл нового сайта
 по образцу (default)&lt;/li&gt;
 &lt;li&gt;Исправить новый конфиг-файл сайта&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;sudo a2ensite newsite&lt;/code&gt;&lt;/li&gt;
