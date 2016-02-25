@@ -17,7 +17,7 @@
       <guid>http://maratart.github.io/blog/change-pdf-meta/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;http://maratart.github.io/blog/images/logo-pdftk.png&#34; alt=&#34;logo-pdftk&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Нужно было заменить в нескольких десятках pdf-файлов мета-свойство Title. Оно отображается, например, в браузере при просмотре соответствуюещго pdf-файла.&lt;/p&gt;
+&lt;p&gt;Нужно было заменить в нескольких десятках pdf-файлов мета-свойство Title. Оно отображается, например, в браузере при просмотре соответствующего pdf-файла.&lt;/p&gt;
 
 &lt;p&gt;Написал для этого на Go утилиту &lt;a href=&#34;https://github.com/maratart/change-pdf-meta&#34;&gt;change-pdf-meta&lt;/a&gt; в качестве обертки для pdftk.&lt;/p&gt;
 </description>
